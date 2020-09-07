@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe World</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/shared/styles/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="/contact/styles.module.css"/>
+</head>
+<body>
+    <main>
+        <header class="header">
+            <h1>Safe World</h1>
+        </header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/index/index.html">Inicio</a>
+                <a class="nav-item nav-link" href="/info/info.html">Historia<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="/sugestions/sugestions.html">Información</a>
+                <a class="nav-item nav-link active" href="/contact/contact.html">Contáctanos</a>
+                <a class="nav-item nav-link" href="https://www.greenpeace.org/argentina/campanas">Greenpeace</a>
+            </div>
+            </div>
+        </nav>
+        <div class="row" style="justify-content: center;margin: 20px;">
+            <div class="col-md-8" style="max-width: 800px;">
+                <form class="was-validated" action="#">
+                    <div class="form-group">
+                        <label for="apenom"> Apellido y Nombre:</label>
+                        <input type="text" pattern="[a-zA-Z]{1,}" class="form-control" maxlength="25" id="apenom" required>
+                        <div class="valid-feedback">Ok.</div>
+                        <div class="invalid-feedback">Dato es obligatorio</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" class="form-control" required>
+                        <div class="valid-feedback">Ok.</div>
+                        <div class="invalid-feedback">Ingrese un email válido</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea name="mensaje" id="mensaje" class="form-control"></textarea>
+                    </div>
+                        <input type="submit">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="footerFixed">
+        <div class="footerContainer">
+            <address>
+                Castro Barros 75, Pilar/Córdoba 
+                <p style="margin:0px ;">Argentina</p>
+            </address>
+            <p>Developed by &copy; Facundo Calle
+            <a href="/contact/contact.html">Contacto &nbsp; <svg style="margin-top: 5px;" width="1.2em" height="1.2em" viewBox="0 0 16 16" class="bi bi-chat-left-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v11.586l2-2A2 2 0 0 1 4.414 11H14a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+              </svg></a>
+              </p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

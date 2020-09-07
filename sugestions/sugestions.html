@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe World</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/shared/styles/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="/sugestions/styles.module.css"/>
+</head>
+<body>
+<main>
+    <div hidden="true" id="myAlertWrong" style="z-index: 1; position:sticky; top: 0;left: 0; right: 0;"class="alert alert-danger alert-dismissible fade show">
+    </div>
+    <div hidden="true" id="myAlertSuccess" style="z-index: 1; position:sticky; top: 0;left: 0; right: 0;"class="alert alert-success alert-dismissible fade show">
+    </div>
+    <header class="header">
+        <h1>Safe World</h1>
+    </header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/index/index.html">Inicio</a>
+                <a class="nav-item nav-link" href="/info/info.html">Historia</a>
+                <a class="nav-item nav-link active" href="/sugestions/sugestions.html">Información</a>
+                <a class="nav-item nav-link" href="/contact/contact.html">Contáctanos</a>
+                <a class="nav-item nav-link" href="https://www.greenpeace.org/argentina/campanas">Greenpeace</a>
+            </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <section>
+                        <div class="card">
+                            <img src="/images/globalwarming.jpeg" class="card-img-top" alt="Global Warming">
+                            <div class="card-body">
+                              <h5 class="card-title">Calentamiento Global</h5>
+                              <p class="card-text">
+                                El calentamiento global es el aumento a largo plazo de la temperatura media
+                                del sistema climático de la Tierra. Es un aspecto primordial del cambio climático actual, 
+                                demostrado por la medición directa de la temperatura y de varios efectos del calentamiento.
+                              </p>
+                              <p id="resultWarming"></p>
+                              <a onclick="guessGlobalWarming();" href="#" class="btn btn-primary">Adivinanza !</a>
+                            </div>
+                          </div>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <section>
+                        <div class="card" >
+                            <img src="/images/machines.jpg" class="card-img-top" alt="Air contamination">
+                            <div class="card-body">
+                              <h5 class="card-title">Contaminación CO2</h5>
+                              <p class="card-text">
+                                El dióxido de carbono (CO2) es un gas presente de form natural en la atmósfera que está 
+                                relacionado con los procesos vitales, la quema de materias como el carbón o los combustibles fósiles 
+                                tambien lo generan, por lo que su emisión se debe limitar para evitar el efecto invernadero.
+                              </p>
+                              <p id="resultCO2"></p>
+                              <a onclick="guessCO2();" href="#" class="btn btn-primary">Adivinanza !</a>
+                            </div>
+                          </div>
+                    </section>
+                </div>
+                <div class="col-md-4" style="margin-bottom: 15px;">
+                    <section>
+                        <div class="card">
+                            <img src="/images/contamination.jpg" class="card-img-top" alt="Basura contaminación">
+                            <div class="card-body">
+                              <h5 class="card-title">Contaminación por basura</h5>
+                              <p class="card-text">
+                                  La contaminación por basura es aquella que implica daños al suelo, aire y agua por la acumulación de 
+                                  residuos no deseados. Se considera que la basura está conformada por desechos depositados de forma incorrecta y 
+                                  concentra tanto residuos sólidos, como líquidos.
+                             </p>
+                             <p id="resultContamination"></p>
+                             <a onclick="guessContamination();" href="#" class="btn btn-primary">Adivinanza !</a>
+                            </div>
+                          </div>
+                    </section>
+                </div>
+        </div>
+        </div>
+    </div>
+</main>
+<footer class="footerFixed">
+    <div class="footerContainer">
+        <address>
+            Castro Barros 75, Pilar/Córdoba 
+            <p style="margin:0px ;">Argentina</p>
+        </address>
+        <p>Developed by &copy; Facundo Calle
+        <a href="/contact/contact.html">Contacto &nbsp; <svg style="margin-top: 5px;" width="1.2em" height="1.2em" viewBox="0 0 16 16" class="bi bi-chat-left-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v11.586l2-2A2 2 0 0 1 4.414 11H14a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+            <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+          </svg></a>
+          </p>
+    </div>
+</footer>
+    <script>
+        function guessCO2(){
+            var quantity_attempt = 3;
+            var checked = false;
+            var country;
+            var cancelled = false;
+            do{
+                quantity_attempt --;
+                country = prompt("¿Cual es el país con mas emisión de CO2?")
+                if(country === null){
+                    cancelled = true;
+                    break;
+                }
+                else if(!country.match(/^[a-zA-Z]+$/g)){
+                    alert("Por favor ingrese solo letras");
+                    quantity_attempt ++;
+                }
+                else if(country.toLocaleLowerCase().trim() === "china"){
+                    showAlert("success","Felicitaciones has acertado !")
+                    var checked = true;
+                }
+                else if(quantity_attempt == 0){
+                    showAlert("error","Mala Suerte... Te quedaste sin intentos")  
+                }
+                else if(quantity_attempt == 2 && checked == false){
+                    alert("Error... Pista: La bandera es color Roja. Te quedan: "+ quantity_attempt + " intentos.");  
+                }
+                else if(quantity_attempt == 1 && checked == false){
+                    alert("Error... Pista: Se encuentra en el continente asiático. Te quedan: "+ quantity_attempt + " intento.");  
+                }
+            } while (quantity_attempt > 0 && checked != true)
+            if(cancelled === false){
+            document.getElementById("resultCO2").innerHTML = "El País era <strong>" + "China" + "</strong>";}
+        };
+        function guessContamination(){
+            var quantity_attempt = 3;
+            var checked = false;
+            var year;
+            var cancelled = false;
+            do{
+                quantity_attempt --;
+                year = prompt("¿En que año se creo la primera Reserva Natural?");
+                if(year === null){
+                    var cancelled = true;
+                    break;
+                }
+                parseYear = parseInt(year)
+                if(isNaN(parseYear)){
+                    alert("Por favor ingrese un numero");
+                    quantity_attempt ++;
+                }
+                else if(parseYear === 1836){
+                    showAlert("success","Felicitaciones has acertado !")
+                    var checked = true;
+                }
+                else if(quantity_attempt == 0){
+                    showAlert("error","Mala Suerte... Te quedaste sin intentos")
+                }
+                else if(quantity_attempt == 2 && checked == false){
+                    alert("Error... Pista: Fue en el siglo XIX. Te quedan: "+ quantity_attempt + " intentos.");
+                }
+                else if(quantity_attempt == 1 && checked == false){
+                    alert("Error... Pista: El año se encuentra entre 1800 y 1850. Te quedan: "+ quantity_attempt + " intentos.");
+                }
+            } while (quantity_attempt > 0 && checked != true)
+            if(cancelled === false){
+            document.getElementById("resultContamination").innerHTML = "El año era <strong>" + 1836 + "</strong>";}
+        };
+        function guessGlobalWarming(){
+            var quantity_attempt = 3;
+            var checked = false;
+            var year;
+            var cancelled = false;
+            do{
+                quantity_attempt --;
+                year = prompt("¿En que año se realizó el Acuerdo de París por el calentamiento global?");
+                if(year === null){
+                    var cancelled = true;
+                    break;
+                }
+                parseYear = parseInt(year)
+                if(isNaN(parseYear)){
+                    alert("Por favor ingrese un numero");
+                    quantity_attempt ++;
+                }
+                else if(parseYear === 2015){
+                    showAlert("success","Felicitaciones has acertado !");
+                    var checked = true;
+                }
+                else if(quantity_attempt == 0){
+                    showAlert("error","Mala Suerte... Te quedaste sin intentos");
+                }
+                else if(parseYear < 2015){
+                    alert("Error... Pista: Es mayor. Te quedan: "+ quantity_attempt + " intentos.");
+                }
+                else if(parseYear > 2015){
+                    alert("Error... Pista: Es menor. Te quedan: "+ quantity_attempt + " intentos.");
+                }
+            } while ((quantity_attempt > 0 && checked != true ))
+            if(cancelled === false){
+            document.getElementById("resultWarming").innerHTML = "El año era <strong>" + 2015 + "</strong>";
+            } 
+        };
+        function showAlert(typeAlert,message){
+            if(typeAlert === "success"){
+                document.getElementById("myAlertSuccess").hidden = false;
+                document.getElementById("myAlertSuccess").innerHTML = message;
+                    setTimeout(() => {
+                        hideAlert(document.getElementById("myAlertSuccess"));
+                    },2500)  
+            }
+            else{
+                document.getElementById("myAlertWrong").hidden = false;
+                document.getElementById("myAlertWrong").innerHTML = message;
+                    setTimeout(() => {
+                        hideAlert(document.getElementById("myAlertWrong"));
+                    },2500)  
+            }
+        }
+        function hideAlert(value){
+            value.hidden = true;
+        };
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

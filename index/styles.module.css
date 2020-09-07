@@ -1,0 +1,9 @@
+body{
+    background: url('/images/world.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bg-light{
+    background-color: rgba(248, 249, 250, 0.85)!important;
+}
