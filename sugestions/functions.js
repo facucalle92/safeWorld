@@ -21,13 +21,13 @@ function guessCO2(){
         else if(quantity_attempt == 0){
             showAlert("error","Mala Suerte... Te quedaste sin intentos")  
         }
-        else if(quantity_attempt == 2 && checked == false){
+        else if(quantity_attempt == 2 && !checked){
             alert("Error... Pista: La bandera es color Roja. Te quedan: "+ quantity_attempt + " intentos.");  
         }
-        else if(quantity_attempt == 1 && checked == false){
+        else if(quantity_attempt == 1 && !checked){
             alert("Error... Pista: Se encuentra en el continente asiático. Te quedan: "+ quantity_attempt + " intento.");  
         }
-    } while (quantity_attempt > 0 && checked != true)
+    } while (quantity_attempt > 0 && !checked)
     if(cancelled === false){
     document.getElementById("resultCO2").innerHTML = "El País era <strong>" + "China" + "</strong>";}
 };
@@ -55,13 +55,13 @@ function guessContamination(){
         else if(quantity_attempt == 0){
             showAlert("error","Mala Suerte... Te quedaste sin intentos")
         }
-        else if(quantity_attempt == 2 && checked == false){
+        else if(quantity_attempt == 2 && !checked){
             alert("Error... Pista: Fue en el siglo XIX. Te quedan: "+ quantity_attempt + " intentos.");
         }
-        else if(quantity_attempt == 1 && checked == false){
+        else if(quantity_attempt == 1 && !checked){
             alert("Error... Pista: El año se encuentra entre 1800 y 1850. Te quedan: "+ quantity_attempt + " intentos.");
         }
-    } while (quantity_attempt > 0 && checked != true)
+    } while (quantity_attempt > 0 && !checked)
     if(cancelled === false){
     document.getElementById("resultContamination").innerHTML = "El año era <strong>" + 1836 + "</strong>";}
 };
@@ -95,7 +95,7 @@ function guessGlobalWarming(){
         else if(parseYear > 2015){
             alert("Error... Pista: Es menor. Te quedan: "+ quantity_attempt + " intentos.");
         }
-    } while ((quantity_attempt > 0 && checked != true ))
+    } while ((quantity_attempt > 0 && !checked))
     if(cancelled === false){
     document.getElementById("resultWarming").innerHTML = "El año era <strong>" + 2015 + "</strong>";
     } 
