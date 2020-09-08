@@ -18,6 +18,8 @@ body{
     font-size-adjust: initial;
     text-transform: uppercase;
     border-bottom: 5px solid white;
+    animation-name: translateHeader;
+    animation-duration: 1.5s ;
 }
 .navbar.navbar-expand-md.navbar-light.bg-light{
     background-color: #295986 !important;
@@ -40,6 +42,8 @@ body{
     display: flex;
     flex: 1; 
     align-items: flex-end;
+    animation-name: translateFooter;
+    animation-duration: 1s;
 }
 .footerContainer{
     display:flex; 
@@ -48,6 +52,8 @@ body{
     flex:1;
     padding: 20px; 
     background-color: #295986;
+    animation-name: opacityFooterText;
+    animation-duration: 2.5s;
 }
 .footerContainer > p , .footerContainer > address{
     color:white; 
@@ -90,3 +96,15 @@ body{
         align-self: center;
     } 
 }
+@keyframes translateHeader {
+    from {height: 0px;}
+    to {height: 90px;}
+  }
+@keyframes translateFooter {
+    from {width: 0px;}
+    to {width: 100%;}
+  }
+@keyframes opacityFooterText {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
