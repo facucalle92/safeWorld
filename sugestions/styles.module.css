@@ -11,8 +11,11 @@ body{
     margin-top: 50px;
 }
 .card{
-    max-width: 25rem;
+    max-width: 23rem;
 }
 .card > img{
     height: 15rem;
+}
+.card-body{
+    background-color: #ececec;
 }

@@ -1,10 +1,12 @@
 function sendData(){
     if(validate()){
     showAlert("success","Éxito! un email fue enviado a " + document.getElementById("email").value + ".")
-    document.getElementById("apenom").style.border = "0.5px solid #28a745";
-    document.getElementById("email").style.border = "0.5px solid #28a745";
+    document.getElementById("apenom").style.border = "0.5px solid #1d466d";
+    document.getElementById("email").style.border = "0.5px solid #1d466d";
     document.getElementById("apenom").value = "";
     document.getElementById("email").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("mensaje").value = "";
     }
 }
 function validate(){

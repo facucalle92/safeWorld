@@ -62,6 +62,21 @@ body{
     text-decoration-line: none;
     color: #828a92 !important;
 }
+.styledButton{
+    border:1px solid rgba(255, 255, 255, 0.657); 
+    padding:.375rem .75rem;
+    border-radius: .30rem; 
+    background-color: #295986; 
+    color: white;
+}
+.styledButton:hover{
+    background-color: #1d466d;
+    cursor: pointer;
+}
+.buttonContainer{
+    display: flex;
+    justify-content: flex-end;
+}
 @media (max-width: 560px){
     .footerContainer{
         display:flex; 

@@ -5,3 +5,13 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.was-validated .form-control:valid{
+    border-color: #1d466d;
+}
+.form-control:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 98, 255, 0.6);
+}
+.form-control{
+    background-color: #dddddd; 
+    border:1px solid #646999;
+}
