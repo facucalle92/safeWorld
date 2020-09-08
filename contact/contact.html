@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,10 @@
 </head>
 <body>
     <main>
+        <div hidden="true" id="myAlertSuccess" style="z-index: 1; position:fixed; top: 0;left: 0; right: 0;"class="alert alert-success alert-dismissible fade show">
+        </div>
+        <div hidden="true" id="myAlertWrong" style="z-index: 1; position:fixed; top: 0;left: 0; right: 0;"class="alert alert-danger alert-dismissible fade show">
+        </div>
         <header class="header">
             <h1>Safe World</h1>
         </header>
@@ -30,25 +34,25 @@
         </nav>
         <div class="row" style="justify-content: center;margin: 20px;">
             <div class="col-md-8" style="max-width: 800px;">
-                <form class="was-validated" action="#">
+                <form class="was-validated" >
                     <div class="form-group">
                         <label for="apenom"> Apellido y Nombre:</label>
-                        <input type="text" pattern="[a-zA-Z]{1,}" class="form-control" maxlength="25" id="apenom" required>
-                        <div class="valid-feedback">Ok.</div>
-                        <div class="invalid-feedback">Dato es obligatorio</div>
+                        <input style="background-color: #dddddd;" type="text" pattern="[a-zA-Z]{1,}" class="form-control" maxlength="25" id="apenom">  
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" class="form-control" required>
-                        <div class="valid-feedback">Ok.</div>
-                        <div class="invalid-feedback">Ingrese un email válido</div>
+                        <input style="background-color: #dddddd;"  type="email" id="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">N° de Teléfono:</label>
+                        <input style="background-color: #dddddd;"  type="tel" id="phone" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="mensaje">Mensaje:</label>
-                        <textarea name="mensaje" id="mensaje" class="form-control"></textarea>
+                        <textarea  style="background-color: #dddddd;"  name="mensaje" id="mensaje" class="form-control"></textarea>
                     </div>
-                        <input type="submit">
                 </form>
+                <input type="submit" onclick="sendData();" >
             </div>
         </div>
     </main>
@@ -68,6 +72,7 @@
             </p>
         </div>
     </footer>
+    <script src="./functions.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
